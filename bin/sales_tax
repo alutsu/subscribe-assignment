@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require_relative '../lib/sales_tax'
+
+input = if ARGV.empty?
+          $stdin.read
+        else
+          File.read(ARGV[0])
+        end
+
+basket = SalesTax::ShoppingBasket.new
+puts basket.process(input)
