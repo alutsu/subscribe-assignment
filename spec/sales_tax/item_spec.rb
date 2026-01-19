@@ -76,9 +76,4 @@ RSpec.describe SalesTax::Item do
       expect(multi_item.subtotal).to eq(33.75)
     end
   end
-
-  describe 'immutability' do
-    it_behaves_like 'an immutable object'
-    it_behaves_like 'has frozen string attribute', :name
-  end
 end

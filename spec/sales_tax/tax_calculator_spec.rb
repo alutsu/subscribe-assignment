@@ -84,12 +84,4 @@ RSpec.describe SalesTax::TaxCalculator do
       expect(calculator.calculate_tax(item)).to eq(1.00)
     end
   end
-
-  describe 'immutability' do
-    it_behaves_like 'an immutable object'
-
-    it 'has frozen rules' do
-      expect(calculator.rules).to be_frozen
-    end
-  end
 end

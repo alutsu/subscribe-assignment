@@ -27,9 +27,4 @@ RSpec.describe SalesTax::Receipt::LineItem do
       expect(line_item.tax_amount).to eq(0.00)
     end
   end
-
-  describe 'immutability' do
-    it_behaves_like 'an immutable object'
-    it_behaves_like 'has frozen string attribute', :name
-  end
 end

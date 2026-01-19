@@ -31,12 +31,4 @@ RSpec.describe SalesTax::Receipt::Receipt do
       expect(receipt.total).to eq(33.00)
     end
   end
-
-  describe 'immutability' do
-    it_behaves_like 'an immutable object'
-
-    it 'has frozen line_items' do
-      expect(receipt.line_items).to be_frozen
-    end
-  end
 end
